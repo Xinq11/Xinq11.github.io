@@ -338,48 +338,22 @@
       
         
           
-            <hr>
-<h2 id="linux和vim"><a href="#linux和vim" class="headerlink" title="linux和vim"></a>linux和vim</h2><p>##一. Linux<br>Linux是一个操作系统,是硬件与其他软件沟通的桥梁</p>
-<p>###1. 命令格式<br>命令[-选项] [参数]</p>
-<p>例:ls -la/etc</p>
-<ul>
-<li>分别命令使用不遵循此格式</li>
-<li>当有多个选项时可以写在一起</li>
-<li>简化选项与完整选项 -a 简化 -all 完整<br>###2. 常用命令<br>#####1. 目录处理命令<br>######1.ls：</li>
-</ul>
-<ul>
-<li>功能:显示目录文件</li>
-<li>语法:ls 选项[-ald] [文件或目录]<pre><code>- -a: 显示所有文件,包括隐藏文件（linux下隐藏文件名以.开头）
-- -l: 显示详细信息 （-lh:更好显示文件大小）
-- -d: 查看目录属性
-- -i: 查看文件i结点</code></pre>######2.mkdir：</li>
-<li>功能:创建新目录</li>
-<li>语法:mkdir -p[目录名] 递归创建 mkdir [目录名]<ul>
-<li>如果一个目录本身不存在,可以用-p在这个本身不存在目录创建的同时再在这个目录下面创建一个子目录</li>
-<li>Linux下用mkdir可以同时创建多个目录，不同于windows一次只能创建一个<br>######3.cd：</li>
-</ul>
-</li>
-<li>功能:切换目录</li>
-<li>语法:cd [目录] cd.. :返回目前目录位置的上一层目录.<br>######4.pwd：</li>
-<li>功能:显示当前目录的绝对路径<ul>
-<li>绝对路径：由根目录写起。例如/home/tuyx/test/file1 </li>
-<li>相对路径：不是从/写起，而是指相对当前工作目录的路径，<br>例如由/home/tuyx/test/file1 要到/home/tuyx/test/file2 下面时，可以写成 “cd ../file2”.<br>######5.rmdir:</li>
-</ul>
-</li>
-<li>功能:删除空目录</li>
-<li>语法:rmdir [目录名]<br>######6.cp：</li>
-<li>功能:复制文件或目录</li>
-<li>语法: cp -rp [原文件或目录] [目标目录]<pre><code>- -r: 复制目录
-- -p: 保留文件属性</code></pre>######7.mv：</li>
-<li>功能:剪切文件,改名 可一次移动多个文件</li>
-<li>语法: mv [原文件或目录] [目标目录]<br>######8.rm：</li>
-<li>功能:删除文件或目录</li>
-<li>语法: rm -rf [文件或目录]<pre><code>- -r:删除目录
-- -f:强制执行
-- -rf:强制删除目录</code></pre></li>
-</ul>
-
           
+linux和vim##一. LinuxLinux是一个操作系统,是硬件与其他软件沟通的桥梁
+###1. 命令格式命令[-选项] [参数]
+例:ls -la/etc
+
+分别命令使用不遵循此格式
+当有多个选项时可以写在一起
+简化选项与完整选项 -a 简化 -all 完整###2. 常用命令#####1
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/03/linux/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -497,8 +471,15 @@
       
         
           
-            
           
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/28/try/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -616,12 +597,19 @@
       
         
           
-            <hr>
-<p>title: My first blog<br>date: 2019-07-28 14:44:16<br>tags:</p>
-<p>Thanks fot weicc.tk</p>
-<p>终于有雏形了..—</p>
+          
+title: My first blogdate: 2019-07-28 14:44:16tags:
+Thanks fot weicc.tk
+终于有雏形了..—
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/28/My-first-blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -739,21 +727,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/28/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
