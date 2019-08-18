@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="klion&#39;s blog">
 <meta property="og:description" content="linux和vim一. LinuxLinux是一个操作系统,是硬件与其他软件沟通的桥梁 1. 命令格式命令[-选项] [参数] 例:ls -la/etc  分别命令使用不遵循此格式 当有多个选项时可以写在一起 简化选项与完整选项 -a 简化 -all 完整2. 常用命令1. 目录处理命令1.ls：   功能:显示目录文件 语法:ls 选项[-ald] [文件或目录]- -a: 显示所有文件,包括">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-18T16:57:12.972Z">
+<meta property="og:updated_time" content="2019-08-18T17:02:09.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="klion&#39;s blog">
 <meta name="twitter:description" content="linux和vim一. LinuxLinux是一个操作系统,是硬件与其他软件沟通的桥梁 1. 命令格式命令[-选项] [参数] 例:ls -la/etc  分别命令使用不遵循此格式 当有多个选项时可以写在一起 简化选项与完整选项 -a 简化 -all 完整2. 常用命令1. 目录处理命令1.ls：   功能:显示目录文件 语法:ls 选项[-ald] [文件或目录]- -a: 显示所有文件,包括">
@@ -406,14 +406,16 @@
 - r:读 代表数字 4  w:写 数字2  x:执行 数字 1</code></pre><h6 id="2-chown"><a href="#2-chown" class="headerlink" title="2.chown"></a>2.chown</h6></li>
 <li>功能:改变文件或目录的所有者</li>
 <li>语法:chown [用户] [文件或目录]<ul>
-<li>在linux中只有root管理者用户可以改变一个文件或目录的所有者<h6 id="3-chgrp"><a href="#3-chgrp" class="headerlink" title="3.chgrp"></a>3.chgrp</h6></li>
+<li>在linux中只有root管理者用户可以改变一个文件或目录的所有者</li>
 </ul>
 </li>
+</ul>
+<h6 id="3-chgrp"><a href="#3-chgrp" class="headerlink" title="3.chgrp"></a>3.chgrp</h6><ul>
 <li>功能:改变文件或目录的所属组</li>
 <li>语法: chgrp [用户组] [文件或目录]<h6 id="4-umask"><a href="#4-umask" class="headerlink" title="4.umask"></a>4.umask</h6></li>
 <li>功能:显示,设置文件的缺省权限</li>
 <li>语法:umask [-S]<pre><code>- -S 以rwx形式显示新建文件缺省条件
-- umask [mode=421] 重新设置文件的缺省权限 在linux下用新建文件默认是没有执行权限</code></pre><h5 id="4-文件搜索命令"><a href="#4-文件搜索命令" class="headerlink" title="4.文件搜索命令"></a>4.文件搜索命令</h5><h6 id="1-find"><a href="#1-find" class="headerlink" title="1.find"></a>1.find</h6><ul>
+- umask [mode=421] 重新设置文件的缺省权限,在linux下用新建文件默认是没有执行权限</code></pre><h5 id="4-文件搜索命令"><a href="#4-文件搜索命令" class="headerlink" title="4.文件搜索命令"></a>4.文件搜索命令</h5><h6 id="1-find"><a href="#1-find" class="headerlink" title="1.find"></a>1.find</h6><ul>
 <li>功能:文件搜索</li>
 <li>语法:find [搜索范围] [匹配条件]<ul>
 <li>find /etc -name init在目录/etc中查找init文件 -iname不区分大小写</li>
@@ -423,21 +425,37 @@
 <li>-a:满足两个条件</li>
 <li>-o:满足任一条件</li>
 <li>find /etc -name inittab -exec ls -l {};在/etc下查找inittab文件并显示其详细信息 -exec/-ok（多一个询问确认的环节） 命令{}; 对搜索结果执行操作</li>
-<li>-type 根据文件类型查找 f文件 d目录 l软链接文件,-inum根据i结点查找 <h6 id="2-locate"><a href="#2-locate" class="headerlink" title="2.locate"></a>2.locate</h6></li>
+<li>-type 根据文件类型查找 f文件 d目录 l软链接文件,-inum根据i结点查找 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="2-locate"><a href="#2-locate" class="headerlink" title="2.locate"></a>2.locate</h6><ul>
 <li>功能:在文件资料库中查找文件,相对find查找速度会更快</li>
-<li>语法: locate 文件名,-i 不区分大小写,updatedb 手动更新文件库<h6 id="3-which"><a href="#3-which" class="headerlink" title="3.which"></a>3.which</h6></li>
+<li>语法: locate 文件名,-i 不区分大小写,updatedb 手动更新文件库</li>
+</ul>
+<h6 id="3-which"><a href="#3-which" class="headerlink" title="3.which"></a>3.which</h6><ul>
 <li>功能:所搜命令所在目录及别名信息</li>
-<li>语法: which 命令 例: which ls<h6 id="4-grep"><a href="#4-grep" class="headerlink" title="4.grep"></a>4.grep</h6></li>
+<li>语法: which 命令 例: which ls</li>
+</ul>
+<h6 id="4-grep"><a href="#4-grep" class="headerlink" title="4.grep"></a>4.grep</h6><ul>
 <li>功能:在文件中搜索字符串匹配的行并输出</li>
 <li>语法: grep -iv [指定子串] [文件]<ul>
 <li>-i 不区分大小写</li>
-<li>-v 排除指定字串<h5 id="5-帮助命令"><a href="#5-帮助命令" class="headerlink" title="5.帮助命令"></a>5.帮助命令</h5><h6 id="1-man"><a href="#1-man" class="headerlink" title="1.man"></a>1.man</h6></li>
+<li>-v 排除指定字串</li>
 </ul>
 </li>
+</ul>
+<h5 id="5-帮助命令"><a href="#5-帮助命令" class="headerlink" title="5.帮助命令"></a>5.帮助命令</h5><h6 id="1-man"><a href="#1-man" class="headerlink" title="1.man"></a>1.man</h6><ul>
 <li>功能:获取帮助信息</li>
-<li>语法: man [命令或配置文件]<h5 id="6-用户管理命令"><a href="#6-用户管理命令" class="headerlink" title="6.用户管理命令"></a>6.用户管理命令</h5><h6 id="1-useradd"><a href="#1-useradd" class="headerlink" title="1.useradd"></a>1.useradd</h6></li>
+<li>语法: man [命令或配置文件]</li>
+</ul>
+<h5 id="6-用户管理命令"><a href="#6-用户管理命令" class="headerlink" title="6.用户管理命令"></a>6.用户管理命令</h5><h6 id="1-useradd"><a href="#1-useradd" class="headerlink" title="1.useradd"></a>1.useradd</h6><ul>
 <li>功能:添加用户</li>
-<li>语法: useradd 用户名<h6 id="2-passwd"><a href="#2-passwd" class="headerlink" title="2.passwd"></a>2.passwd</h6></li>
+<li>语法: useradd 用户名</li>
+</ul>
+<h6 id="2-passwd"><a href="#2-passwd" class="headerlink" title="2.passwd"></a>2.passwd</h6><ul>
 <li>功能:设置用户密码</li>
 <li>语法: passwd 用户名<h6 id="3-who"><a href="#3-who" class="headerlink" title="3.who"></a>3.who</h6></li>
 <li>功能:查看登录用户信息<h5 id="7-压缩解压命令"><a href="#7-压缩解压命令" class="headerlink" title="7.压缩解压命令"></a>7.压缩解压命令</h5><h6 id="1-gzip"><a href="#1-gzip" class="headerlink" title="1.gzip"></a>1.gzip</h6></li>
@@ -469,10 +487,6 @@
 </li>
 <li>功能:解压缩.zip的文件</li>
 <li>语法: unzip [压缩文件]</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 
       
