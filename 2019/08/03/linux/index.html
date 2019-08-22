@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="klion&#39;s blog">
 <meta property="og:description" content="linux和vim一. LinuxLinux是一个操作系统,是硬件与其他软件沟通的桥梁 1. 命令格式命令[-选项] [参数] 例:ls -la/etc  分别命令使用不遵循此格式 当有多个选项时可以写在一起 简化选项与完整选项 -a 简化 -all 完整2. 常用命令1. 目录处理命令1.ls   功能:显示目录文件 语法:ls 选项[-ald] [文件或目录]- -a: 显示所有文件,包括隐">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-22T13:06:36.475Z">
+<meta property="og:updated_time" content="2019-08-22T13:14:10.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="klion&#39;s blog">
 <meta name="twitter:description" content="linux和vim一. LinuxLinux是一个操作系统,是硬件与其他软件沟通的桥梁 1. 命令格式命令[-选项] [参数] 例:ls -la/etc  分别命令使用不遵循此格式 当有多个选项时可以写在一起 简化选项与完整选项 -a 简化 -all 完整2. 常用命令1. 目录处理命令1.ls   功能:显示目录文件 语法:ls 选项[-ald] [文件或目录]- -a: 显示所有文件,包括隐">
@@ -353,16 +353,13 @@
 - -d: 查看目录属性
 - -i: 查看文件i结点</code></pre><h6 id="2-mkdir"><a href="#2-mkdir" class="headerlink" title="2.mkdir"></a>2.mkdir</h6></li>
 <li>功能:创建新目录</li>
-<li>语法:mkdir -p[目录名] 递归创建 mkdir [目录名]<ul>
-<li>如果一个目录本身不存在,可以用-p在这个本身不存在目录创建的同时再在这个目录下面创建一个子目录</li>
-<li>Linux下用mkdir可以同时创建多个目录，不同于windows一次只能创建一个<h6 id="3-cd"><a href="#3-cd" class="headerlink" title="3.cd"></a>3.cd</h6></li>
-</ul>
-</li>
+<li>语法:mkdir -p[目录名] 递归创建 mkdir [目录名]<pre><code>- 如果一个目录本身不存在,可以用-p在这个本身不存在目录创建的同时再在这个目录下面创建一个子目录
+- Linux下用mkdir可以同时创建多个目录,不同于windows一次只能创建一个</code></pre><h6 id="3-cd"><a href="#3-cd" class="headerlink" title="3.cd"></a>3.cd</h6></li>
 <li>功能:切换目录</li>
-<li>语法:cd [目录] cd.. :返回目前目录位置的上一层目录.<h6 id="4-pw："><a href="#4-pw：" class="headerlink" title="4.pw："></a>4.pw：</h6></li>
+<li>语法:cd [目录] cd.. :返回目前目录位置的上一层目录.<h6 id="4-pw"><a href="#4-pw" class="headerlink" title="4.pw"></a>4.pw</h6></li>
 <li>功能:显示当前目录的绝对路径<ul>
 <li>绝对路径：由根目录写起。例如/home/tuyx/test/file1 </li>
-<li>相对路径：不是从/写起，而是指相对当前工作目录的路径，<br>例如由/home/tuyx/test/file1 要到/home/tuyx/test/file2下面时,可以写成 “cd ../file2”.<h6 id="5-rmdir"><a href="#5-rmdir" class="headerlink" title="5.rmdir"></a>5.rmdir</h6></li>
+<li>相对路径：不是从/写起，而是指相对当前工作目录的路径,例如由/home/tuyx/test/file1 要到/home/tuyx/test/file2下面时,可以写成 “cd ../file2”.<h6 id="5-rmdir"><a href="#5-rmdir" class="headerlink" title="5.rmdir"></a>5.rmdir</h6></li>
 </ul>
 </li>
 <li>功能:删除空目录</li>
@@ -423,17 +420,17 @@
 <li>-a:满足两个条件</li>
 <li>-o:满足任一条件</li>
 <li>find /etc -name inittab -exec ls -l {};在/etc下查找inittab文件并显示其详细信息 -exec/-ok（多一个询问确认的环节） 命令{}; 对搜索结果执行操作</li>
-<li>-type 根据文件类型查找 f文件 d目录 l软链接文件,-inum根据i结点查找 <h6 id="2-locate"><a href="#2-locate" class="headerlink" title="2.locate"></a>2.locate</h6></li>
+<li>-type 根据文件类型查找 f文件 d目录 l软链接文件,-inum根据i结点查找 <h6 id="2-locate"><a href="#2-locate" class="headerlink" title="2.locate"></a>2.locate</h6><ul>
 <li>功能:在文件资料库中查找文件,相对find查找速度会更快</li>
 <li>语法: locate 文件名,-i 不区分大小写,updatedb 手动更新文件库<h6 id="3-which"><a href="#3-which" class="headerlink" title="3.which"></a>3.which</h6></li>
 <li>功能:所搜命令所在目录及别名信息</li>
 <li>语法: which 命令 例: which ls <h6 id="4-grep"><a href="#4-grep" class="headerlink" title="4.grep"></a>4.grep</h6></li>
 <li>功能:在文件中搜索字符串匹配的行并输出</li>
-<li>语法: grep -iv [指定子串] [文件]<ul>
-<li>-i 不区分大小写</li>
-<li>-v 排除指定字串<h5 id="5-帮助命令"><a href="#5-帮助命令" class="headerlink" title="5.帮助命令"></a>5.帮助命令</h5><h6 id="1-man"><a href="#1-man" class="headerlink" title="1.man"></a>1.man</h6></li>
+<li>语法: grep -iv [指定子串] [文件]</li>
 </ul>
 </li>
+<li>-i 不区分大小写</li>
+<li>-v 排除指定字串<h5 id="5-帮助命令"><a href="#5-帮助命令" class="headerlink" title="5.帮助命令"></a>5.帮助命令</h5><h6 id="1-man"><a href="#1-man" class="headerlink" title="1.man"></a>1.man</h6><ul>
 <li>功能:获取帮助信息</li>
 <li>语法: man [命令或配置文件]<h5 id="6-用户管理命令"><a href="#6-用户管理命令" class="headerlink" title="6.用户管理命令"></a>6.用户管理命令</h5><h6 id="1-useradd"><a href="#1-useradd" class="headerlink" title="1.useradd"></a>1.useradd</h6></li>
 <li>功能:添加用户</li>
@@ -442,14 +439,14 @@
 <li>语法: passwd 用户名<h6 id="3-who"><a href="#3-who" class="headerlink" title="3.who"></a>3.who</h6></li>
 <li>功能:查看登录用户信息<h5 id="7-压缩解压命令"><a href="#7-压缩解压命令" class="headerlink" title="7.压缩解压命令"></a>7.压缩解压命令</h5><h6 id="1-gzip"><a href="#1-gzip" class="headerlink" title="1.gzip"></a>1.gzip</h6></li>
 <li>功能:压缩文件（只能压缩文件,不能压缩目录,且不保留原文件）</li>
-<li>语法: gzip [文件] <ul>
+<li>语法: gzip [文件] </li>
 <li>压缩后文件格式：.gz<h6 id="2-gunzip"><a href="#2-gunzip" class="headerlink" title="2.gunzip"></a>2.gunzip</h6></li>
-</ul>
-</li>
 <li>功能:解压缩.gz的压缩文件</li>
 <li>语法: gunzip [压缩文件]<h6 id="3-tar"><a href="#3-tar" class="headerlink" title="3.tar"></a>3.tar</h6></li>
 <li>功能:打包目录</li>
-<li>语法: tar 选项[-zcf] [压缩后文件名]  [目录]-压缩<ul>
+<li>语法: tar 选项[-zcf] [压缩后文件名]  [目录]-压缩</li>
+</ul>
+</li>
 <li>tar 选项[-zxf] [压缩后文件名]-解压</li>
 <li>-c 打包</li>
 <li>-v 显示详细信息</li>
@@ -458,17 +455,17 @@
 <li>-x 解包</li>
 <li>-f 指定解压文件</li>
 <li>-z 解压缩</li>
-<li>压缩后文件格式:.tar.gz<h6 id="4-zip"><a href="#4-zip" class="headerlink" title="4.zip"></a>4.zip</h6></li>
-</ul>
-</li>
+<li>压缩后文件格式:.tar.gz<h6 id="4-zip"><a href="#4-zip" class="headerlink" title="4.zip"></a>4.zip</h6><ul>
 <li>功能:压缩文件或目录（压缩后保留源文件）</li>
-<li>语法: zip 选项[-r] [压缩后文件名] [文件或目录]<ul>
-<li>-r 压缩目录</li>
-<li>压缩后文件格式：.zip<h6 id="5-unzip"><a href="#5-unzip" class="headerlink" title="5.unzip"></a>5.unzip</h6></li>
+<li>语法: zip 选项[-r] [压缩后文件名] [文件或目录]</li>
 </ul>
 </li>
+<li>-r 压缩目录</li>
+<li>压缩后文件格式：.zip<h6 id="5-unzip"><a href="#5-unzip" class="headerlink" title="5.unzip"></a>5.unzip</h6><ul>
 <li>功能:解压缩.zip的文件</li>
 <li>语法: unzip [压缩文件]</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -659,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux和vim"><span class="nav-number">1.</span> <span class="nav-text">linux和vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-Linux"><span class="nav-number">2.</span> <span class="nav-text">一. Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-命令格式"><span class="nav-number">2.1.</span> <span class="nav-text">1. 命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-常用命令"><span class="nav-number">2.2.</span> <span class="nav-text">2. 常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-目录处理命令"><span class="nav-number">2.2.0.1.</span> <span class="nav-text">1. 目录处理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-ls"><span class="nav-number">2.2.0.1.1.</span> <span class="nav-text">1.ls</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-mkdir"><span class="nav-number">2.2.0.1.2.</span> <span class="nav-text">2.mkdir</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-cd"><span class="nav-number">2.2.0.1.3.</span> <span class="nav-text">3.cd</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-pw："><span class="nav-number">2.2.0.1.4.</span> <span class="nav-text">4.pw：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-rmdir"><span class="nav-number">2.2.0.1.5.</span> <span class="nav-text">5.rmdir</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#6-cp"><span class="nav-number">2.2.0.1.6.</span> <span class="nav-text">6.cp</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#7-mv"><span class="nav-number">2.2.0.1.7.</span> <span class="nav-text">7.mv</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#8-rm"><span class="nav-number">2.2.0.1.8.</span> <span class="nav-text">8.rm</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-文件处理命令"><span class="nav-number">2.2.0.2.</span> <span class="nav-text">2.文件处理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-touch"><span class="nav-number">2.2.0.2.1.</span> <span class="nav-text">1.touch</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-cat"><span class="nav-number">2.2.0.2.2.</span> <span class="nav-text">2.cat</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-tac"><span class="nav-number">2.2.0.2.3.</span> <span class="nav-text">3.tac</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-more"><span class="nav-number">2.2.0.2.4.</span> <span class="nav-text">4.more</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-less"><span class="nav-number">2.2.0.2.5.</span> <span class="nav-text">5.less</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#6-head"><span class="nav-number">2.2.0.2.6.</span> <span class="nav-text">6.head</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#7-tail"><span class="nav-number">2.2.0.2.7.</span> <span class="nav-text">7.tail</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#8-ln"><span class="nav-number">2.2.0.2.8.</span> <span class="nav-text">8.ln</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-权限管理命令"><span class="nav-number">2.2.0.3.</span> <span class="nav-text">3.权限管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-chmod"><span class="nav-number">2.2.0.3.1.</span> <span class="nav-text">1.chmod</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-chown"><span class="nav-number">2.2.0.3.2.</span> <span class="nav-text">2.chown</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-chgrp"><span class="nav-number">2.2.0.3.3.</span> <span class="nav-text">3.chgrp</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-umask"><span class="nav-number">2.2.0.3.4.</span> <span class="nav-text">4.umask</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-文件搜索命令"><span class="nav-number">2.2.0.4.</span> <span class="nav-text">4.文件搜索命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-find"><span class="nav-number">2.2.0.4.1.</span> <span class="nav-text">1.find</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-locate"><span class="nav-number">2.2.0.4.2.</span> <span class="nav-text">2.locate</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-which"><span class="nav-number">2.2.0.4.3.</span> <span class="nav-text">3.which</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-grep"><span class="nav-number">2.2.0.4.4.</span> <span class="nav-text">4.grep</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-帮助命令"><span class="nav-number">2.2.0.5.</span> <span class="nav-text">5.帮助命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-man"><span class="nav-number">2.2.0.5.1.</span> <span class="nav-text">1.man</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-用户管理命令"><span class="nav-number">2.2.0.6.</span> <span class="nav-text">6.用户管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-useradd"><span class="nav-number">2.2.0.6.1.</span> <span class="nav-text">1.useradd</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-passwd"><span class="nav-number">2.2.0.6.2.</span> <span class="nav-text">2.passwd</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-who"><span class="nav-number">2.2.0.6.3.</span> <span class="nav-text">3.who</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-压缩解压命令"><span class="nav-number">2.2.0.7.</span> <span class="nav-text">7.压缩解压命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-gzip"><span class="nav-number">2.2.0.7.1.</span> <span class="nav-text">1.gzip</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-gunzip"><span class="nav-number">2.2.0.7.2.</span> <span class="nav-text">2.gunzip</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-tar"><span class="nav-number">2.2.0.7.3.</span> <span class="nav-text">3.tar</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-zip"><span class="nav-number">2.2.0.7.4.</span> <span class="nav-text">4.zip</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-unzip"><span class="nav-number">2.2.0.7.5.</span> <span class="nav-text">5.unzip</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux和vim"><span class="nav-number">1.</span> <span class="nav-text">linux和vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-Linux"><span class="nav-number">2.</span> <span class="nav-text">一. Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-命令格式"><span class="nav-number">2.1.</span> <span class="nav-text">1. 命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-常用命令"><span class="nav-number">2.2.</span> <span class="nav-text">2. 常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-目录处理命令"><span class="nav-number">2.2.0.1.</span> <span class="nav-text">1. 目录处理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-ls"><span class="nav-number">2.2.0.1.1.</span> <span class="nav-text">1.ls</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-mkdir"><span class="nav-number">2.2.0.1.2.</span> <span class="nav-text">2.mkdir</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-cd"><span class="nav-number">2.2.0.1.3.</span> <span class="nav-text">3.cd</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-pw"><span class="nav-number">2.2.0.1.4.</span> <span class="nav-text">4.pw</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-rmdir"><span class="nav-number">2.2.0.1.5.</span> <span class="nav-text">5.rmdir</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#6-cp"><span class="nav-number">2.2.0.1.6.</span> <span class="nav-text">6.cp</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#7-mv"><span class="nav-number">2.2.0.1.7.</span> <span class="nav-text">7.mv</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#8-rm"><span class="nav-number">2.2.0.1.8.</span> <span class="nav-text">8.rm</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-文件处理命令"><span class="nav-number">2.2.0.2.</span> <span class="nav-text">2.文件处理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-touch"><span class="nav-number">2.2.0.2.1.</span> <span class="nav-text">1.touch</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-cat"><span class="nav-number">2.2.0.2.2.</span> <span class="nav-text">2.cat</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-tac"><span class="nav-number">2.2.0.2.3.</span> <span class="nav-text">3.tac</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-more"><span class="nav-number">2.2.0.2.4.</span> <span class="nav-text">4.more</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-less"><span class="nav-number">2.2.0.2.5.</span> <span class="nav-text">5.less</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#6-head"><span class="nav-number">2.2.0.2.6.</span> <span class="nav-text">6.head</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#7-tail"><span class="nav-number">2.2.0.2.7.</span> <span class="nav-text">7.tail</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#8-ln"><span class="nav-number">2.2.0.2.8.</span> <span class="nav-text">8.ln</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-权限管理命令"><span class="nav-number">2.2.0.3.</span> <span class="nav-text">3.权限管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-chmod"><span class="nav-number">2.2.0.3.1.</span> <span class="nav-text">1.chmod</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-chown"><span class="nav-number">2.2.0.3.2.</span> <span class="nav-text">2.chown</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-chgrp"><span class="nav-number">2.2.0.3.3.</span> <span class="nav-text">3.chgrp</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-umask"><span class="nav-number">2.2.0.3.4.</span> <span class="nav-text">4.umask</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-文件搜索命令"><span class="nav-number">2.2.0.4.</span> <span class="nav-text">4.文件搜索命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-find"><span class="nav-number">2.2.0.4.1.</span> <span class="nav-text">1.find</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-locate"><span class="nav-number">2.2.0.4.2.</span> <span class="nav-text">2.locate</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-which"><span class="nav-number">2.2.0.4.3.</span> <span class="nav-text">3.which</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-grep"><span class="nav-number">2.2.0.4.4.</span> <span class="nav-text">4.grep</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-帮助命令"><span class="nav-number">2.2.0.5.</span> <span class="nav-text">5.帮助命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-man"><span class="nav-number">2.2.0.5.1.</span> <span class="nav-text">1.man</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-用户管理命令"><span class="nav-number">2.2.0.6.</span> <span class="nav-text">6.用户管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-useradd"><span class="nav-number">2.2.0.6.1.</span> <span class="nav-text">1.useradd</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-passwd"><span class="nav-number">2.2.0.6.2.</span> <span class="nav-text">2.passwd</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-who"><span class="nav-number">2.2.0.6.3.</span> <span class="nav-text">3.who</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-压缩解压命令"><span class="nav-number">2.2.0.7.</span> <span class="nav-text">7.压缩解压命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-gzip"><span class="nav-number">2.2.0.7.1.</span> <span class="nav-text">1.gzip</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-gunzip"><span class="nav-number">2.2.0.7.2.</span> <span class="nav-text">2.gunzip</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-tar"><span class="nav-number">2.2.0.7.3.</span> <span class="nav-text">3.tar</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-zip"><span class="nav-number">2.2.0.7.4.</span> <span class="nav-text">4.zip</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-unzip"><span class="nav-number">2.2.0.7.5.</span> <span class="nav-text">5.unzip</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
