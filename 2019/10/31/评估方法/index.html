@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="####机器学习-模型评估方法  当我们只有一个包含m个样例的数据集D，我们既要训练，又要测试，怎么才能做到呢? 通过对进行适当的处理，从中产生出训练集S和测试集T#####留出法 留出法直接将数据集D划分为两个互斥的集合，其中一个作为我们的训练集S，另一个作为测试集T，即D=S∪T，S∩T=Ø，在S上训练出模型后，再用T来评估其测试误差，作为对泛化误差的估计。 常见做法是将大约2/3~4/5的样">
+<meta name="description" content="–title: 模型评估方法data: 2019-11-2 categories: 机器学习#机器学习-模型评估方法  当我们只有一个包含m个样例的数据集D，我们既要训练，又要测试，怎么才能做到呢? 通过对进行适当的处理，从中产生出训练集S和测试集T##留出法 留出法直接将数据集D划分为两个互斥的集合，其中一个作为我们的训练集S，另一个作为测试集T，即D=S∪T，S∩T=Ø，在S上训练出模型后，再">
 <meta property="og:type" content="article">
 <meta property="og:title" content="klion&#39;s blog">
 <meta property="og:url" content="http://yoursite.com/2019/10/31/评估方法/index.html">
 <meta property="og:site_name" content="klion&#39;s blog">
-<meta property="og:description" content="####机器学习-模型评估方法  当我们只有一个包含m个样例的数据集D，我们既要训练，又要测试，怎么才能做到呢? 通过对进行适当的处理，从中产生出训练集S和测试集T#####留出法 留出法直接将数据集D划分为两个互斥的集合，其中一个作为我们的训练集S，另一个作为测试集T，即D=S∪T，S∩T=Ø，在S上训练出模型后，再用T来评估其测试误差，作为对泛化误差的估计。 常见做法是将大约2/3~4/5的样">
+<meta property="og:description" content="–title: 模型评估方法data: 2019-11-2 categories: 机器学习#机器学习-模型评估方法  当我们只有一个包含m个样例的数据集D，我们既要训练，又要测试，怎么才能做到呢? 通过对进行适当的处理，从中产生出训练集S和测试集T##留出法 留出法直接将数据集D划分为两个互斥的集合，其中一个作为我们的训练集S，另一个作为测试集T，即D=S∪T，S∩T=Ø，在S上训练出模型后，再">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="d:%5Cblog%5Cblog%5Cpublic%5Cimages%5C10%E6%8A%98%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81.jpg">
-<meta property="og:updated_time" content="2019-11-02T05:51:53.377Z">
+<meta property="og:updated_time" content="2019-11-03T05:03:29.404Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="klion&#39;s blog">
-<meta name="twitter:description" content="####机器学习-模型评估方法  当我们只有一个包含m个样例的数据集D，我们既要训练，又要测试，怎么才能做到呢? 通过对进行适当的处理，从中产生出训练集S和测试集T#####留出法 留出法直接将数据集D划分为两个互斥的集合，其中一个作为我们的训练集S，另一个作为测试集T，即D=S∪T，S∩T=Ø，在S上训练出模型后，再用T来评估其测试误差，作为对泛化误差的估计。 常见做法是将大约2/3~4/5的样">
+<meta name="twitter:description" content="–title: 模型评估方法data: 2019-11-2 categories: 机器学习#机器学习-模型评估方法  当我们只有一个包含m个样例的数据集D，我们既要训练，又要测试，怎么才能做到呢? 通过对进行适当的处理，从中产生出训练集S和测试集T##留出法 留出法直接将数据集D划分为两个互斥的集合，其中一个作为我们的训练集S，另一个作为测试集T，即D=S∪T，S∩T=Ø，在S上训练出模型后，再">
 <meta name="twitter:image" content="d:%5Cblog%5Cblog%5Cpublic%5Cimages%5C10%E6%8A%98%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81.jpg">
 
 
@@ -339,16 +339,17 @@
       
 
       
-        <p>####机器学习-模型评估方法</p>
+        <p>–<br>title: 模型评估方法<br>data: 2019-11-2</p>
+<h2 id="categories-机器学习"><a href="#categories-机器学习" class="headerlink" title="categories: 机器学习"></a>categories: 机器学习</h2><p>#机器学习-模型评估方法</p>
 <ul>
-<li>当我们只有一个包含m个样例的数据集D，我们既要训练，又要测试，怎么才能做到呢? 通过对进行适当的处理，从中产生出训练集S和测试集T<br>#####留出法</li>
+<li>当我们只有一个包含m个样例的数据集D，我们既要训练，又要测试，怎么才能做到呢? 通过对进行适当的处理，从中产生出训练集S和测试集T<br>##留出法</li>
 <li>留出法直接将数据集D划分为两个互斥的集合，其中一个作为我们的训练集S，另一个作为测试集T，即D=S∪T，S∩T=Ø，在S上训练出模型后，再用T来评估其测试误差，作为对泛化误差的估计。</li>
-<li>常见做法是将大约2/3~4/5的样本用于训练，其余的用于测试。<br>#####交叉验证法</li>
+<li>常见做法是将大约2/3~4/5的样本用于训练，其余的用于测试。<br>##交叉验证法</li>
 <li>交叉验证法是先将数据集D划分为k个大小相似的互斥子集，即D=D1∪D2∪…∪Dk,Di∩Dj=Ø(i≠j)，每次用k-1个子集的并集作为训练集，余下的那个子集作为测试集，很显然，交叉验证法评估结果的稳定性和保真性很大程度上取决于k的取值，通常为强调这一点，我们都会把交叉验证法称为”k折交叉验证”,k最常用的取值是10，此时称为10折交叉验证。</li>
 </ul>
 <p><img src="D:%5Cblog%5Cblog%5Cpublic%5Cimages%5C10%E6%8A%98%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81.jpg" alt="avatar"></p>
 <ul>
-<li><p>假定数据集D中包含m个样本，如果令k=m,则得到了交叉验证法的一个特例-留一法<br>#####自助法</p>
+<li><p>假定数据集D中包含m个样本，如果令k=m,则得到了交叉验证法的一个特例-留一法<br>##自助法</p>
 </li>
 <li><p>在留出法和交叉验证法中，由于保留了一部分数据集作为测试用，因此实际评估的模型所使用的训练集比D小，这必然会引起一些因训练样本规模不同而导致的估计误差</p>
 </li>
@@ -443,8 +444,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -534,6 +544,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#categories-机器学习"><span class="nav-number">1.</span> <span class="nav-text">categories: 机器学习</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
